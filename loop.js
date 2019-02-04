@@ -1,21 +1,21 @@
-for (var i = 1; i <= 100; i++) {
-  if (i % 15 === 0) {
-    console.log("fizzbuzz");
+// function sumOfMultiples(num){
+//   var val = 1;
+//   return val;
+// }
+function fizzbuzzLoop() {
+  for (var i = 1; i <= 100; i++) {
+    if (i % 15 === 0) {
+      console.log("fizzbuzz");
+    }
+    else if (i % 3 === 0) {
+      console.log("fizz");
+    }
+    else if (i % 5 === 0) {
+      console.log("buzz");
+    }
+    else console.log(i);
   }
-  else if (i % 3 === 0) {
-    console.log("fizz");
-  }
-  else if (i % 5 === 0) {
-    console.log("buzz");
-  }
-  else console.log(i);
 }
 
+document.addEventListener("DOMContentLoaded",fizzbuzzLoop);
 
-
-// if(num % 3 === 0) {
-//   console.log("Orbiter trans
-//   else if (seconds === 31) {
-// //   console.log("Ground launch sequencer is go for auto sequence start");
-
-// Numbers that are multiples of 3 are replaced with "fizz", multiples of 5 are replaced with "buzz", and multiples of 15 are replaced with "fizzbuzz"
