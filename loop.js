@@ -3,19 +3,28 @@
 //   return val;
 // }
 function fizzbuzzLoop() {
+  var fizzBuzzDiv = document.getElementById('fizzbuzz-div');
+
   for (var i = 1; i <= 100; i++) {
     if (i % 15 === 0) {
-      console.log("fizzbuzz");
+      addFizzbuzz("fizzbuzz", fizzBuzzDiv);
     }
     else if (i % 3 === 0) {
-      console.log("fizz");
+      addFizzbuzz("fizz", fizzBuzzDiv);
     }
     else if (i % 5 === 0) {
-      console.log("buzz");
+      addFizzbuzz("buzz", fizzBuzzDiv);
     }
-    else console.log(i);
+    else addFizzbuzz(i, fizzBuzzDiv);
   }
+}
+function addFizzbuzz(text, list){
+  var newDiv = document.createElement ('div');
+  newDiv.innerText = text;
+  newDiv.classList.add("textbox");
+  list.appendChild(newDiv);
 }
 
 document.addEventListener("DOMContentLoaded",fizzbuzzLoop);
+
 
